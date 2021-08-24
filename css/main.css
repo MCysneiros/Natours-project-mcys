@@ -1,5 +1,4 @@
-*,
-*::after,
+*, *::after,
 *::before {
   margin: 0;
   padding: 0;
@@ -67,6 +66,7 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
+
 .heading-primary-main {
   display: block;
   font-size: 6rem;
@@ -78,6 +78,7 @@ body {
   /*animation-delay: 3s;*/
   animation-timing-function: ease-out;
 }
+
 .heading-primary-sub {
   display: block;
   font-size: 2rem;
@@ -89,8 +90,7 @@ body {
   animation: moveInRight ease-out 1s;
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -105,6 +105,7 @@ body {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
@@ -119,6 +120,7 @@ body {
   background-color: #fff;
   color: #777;
 }
+
 .btn-white::after {
   background-color: #fff;
 }
@@ -143,25 +145,23 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    ),
-    url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
+
 .header_logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
+
 .header_logo {
   height: 3.5rem;
 }
+
 .header_text-box {
   position: absolute;
   top: 40%;
@@ -174,5 +174,48 @@ body {
   max-width: 114rem;
   background-color: #eee;
   margin: 0 auto;
-  margin-bottom: 80px;
 }
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  background-color: purple;
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - (6rem* 2)) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc( ((100% - (6rem* 2)) / 3) * 2 + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - (6rem* 3)) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc( ((100% - (6rem* 3)) / 4) * 2 + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc( ((100% - (6rem* 3)) / 4) * 3 + (2 * 6rem));
+}
+/*# sourceMappingURL=main.css.map */
