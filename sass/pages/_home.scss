@@ -9,7 +9,7 @@
 .center-box {
   display: flex;
   margin: 0 auto;
-  max-width: 114rem;
+  max-width: $grid-width;
   justify-content: space-around;
   gap: 6rem;
   .center-text-box {

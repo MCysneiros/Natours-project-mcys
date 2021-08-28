@@ -1,11 +1,12 @@
 @import "../abstracts/variables";
+@import "../abstracts/_mixins";
 
 .footer {
   background-color: $color-gray-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
   &-container {
-    max-width: 114rem;
+    max-width: $grid-width;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

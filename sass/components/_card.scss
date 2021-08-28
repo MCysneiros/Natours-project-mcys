@@ -1,8 +1,9 @@
 @import "../abstracts/variables";
+@import "../abstracts/_mixins";
 
 .tours-container {
   display: flex;
-  max-width: 114rem;
+  max-width: $grid-width;
   margin: 0 auto;
   position: relative;
   gap: 6rem;
