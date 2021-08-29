@@ -51,4 +51,8 @@
   &-2 {
     margin-top: 6rem;
   }
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
 }
