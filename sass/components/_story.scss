@@ -31,6 +31,7 @@
     shape-outside: circle(50% at 50% 50%);
     float: left;
     clip-path: circle(50% at 50% 50%);
+
     transform: translateX(-3rem) skewX(12deg);
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
