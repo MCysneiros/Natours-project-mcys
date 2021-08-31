@@ -29,10 +29,21 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.1s;
+    @include respond(tab-land) {
+      display: block;
+      position: relative;
+    }
   }
   &-left {
     width: 33.33333333333333%;
     display: table-cell;
+    @include respond(tab-land) {
+      display: flex;
+      width: 100%;
+    }
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &-right {
@@ -40,11 +51,15 @@
     width: 66.66666666666666667%;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respond(tab-port) {
+    }
   }
 
   &-img {
     display: block;
     width: 100%;
+    @include respond(tab-port) {
+    }
   }
 
   &-text {
